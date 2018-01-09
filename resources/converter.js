@@ -53,80 +53,6 @@ $(function() {
     converter = converter || converters.default;
     return converter(data, depth ? depth + 1 : 0);
   };
-  
-  var PasteBucket = function () {
-    var pasteBucket = {
-      visible: false,
-      toggle: function (force) {
-        if (typeof force !== 'undefined') {
-          this.visible = force;
-        } else {
-          this.visible = !this.visible;
-        }
-        
-        if (this.visible) {
-          $('.paste-tool').show();
-        } else {
-          $('.paste-tool').hide();
-        }
-      },
-      processData: function () {
-        var pasteData = $('.paste-tool .paste-bucket').val(),
-            self = this;
-
-        if (pasteData.length === 0) {
-          $('.paste-bucket').parent('.form-group').addClass('has-error');
-          return false;
-        }
-        self.loadDataFromString(pasteData);
-        self.toggle();
-      },
-      checkParams: function () {
-        
-        var searchTerms = new can.List(window.location.search.replace('?','').split('&')),
-          pastedLink;
-        searchTerms.each(function (item) {
-          var params = item.split('=');
-          if (params[0] === 'checklist' && params[1]) {
-            pastedLink = decodeURI(params[1]);
-          }
-        });
-        
-        if (pastedLink) {
-          this.loadDataFromString(pastedLink);
-        }
-      },
-      loadDataFromString: function (dataString) {
-        var pasteDataMap = new can.Map(JSON.parse(dataString))
-        pasteDataMap.each(function (val, key, item) {
-            var $target = can.$('[name='+key+']');
-            if ($target.eq(0).is('[type=checkbox]')) {
-                val.each(function (chkboxVal) {
-                    $target.filter('[value="'+chkboxVal+'"]').prop('checked', true);
-                });
-                
-                return true;
-            }
-            if ($target.eq(0).is('[type=radio]')) {
-                $target.filter('[value="'+val+'"]').prop('checked', true);
-                return true;
-            }
-            $target.val(val);
-            
-        });
-      }
-    }
-    return pasteBucket;
-  }
-  var pasteBucket = new PasteBucket();
-    
-  $('.paste-tool .btn-default').on('click', function () {
-    pasteBucket.processData();
-  });
-  pasteBucket.toggle(false);//close the bucket
-  $('.open-paste-tool-js').on('click', function () {
-    pasteBucket.toggle();
-  });
 
   $.getJSON('questions.json').then(function(data) {
     var questions = data.questions;
@@ -147,8 +73,6 @@ $(function() {
 
     $('#checklist').append("<div class='text-center'><input class='btn btn-lg btn-primary' type='submit' value='Submit' /></div>");
     
-    //check if linking into results
-    pasteBucket.checkParams();
   });
 
   $('body').on('submit', 'form', function(ev){
@@ -158,7 +82,7 @@ $(function() {
   })
 
   var answers = {
-    "do-all-employees-go-through-a-technical-": 0.46,//Do all employees go through a technical training?
+   /* "do-all-employees-go-through-a-technical-": 0.46,//Do all employees go through a technical training?
     "what-is-the-projects-vision": 0.45,//What is the project\'s vision?
     "how-long-until-something-can-be-released": 0.48,//How long until something can be released?
     "does-the-company-have-outings": 0.45,//Does the company have outings?
@@ -168,7 +92,7 @@ $(function() {
     "are-there-unit-tests": 0.2,//Are there unit tests?
     "is-there-documentation-for-the-code": 0.28,//Is there documentation for the code?
     "continuous-integration": 0.2,//Continuous integration
-    "the-following-environments-exist": 0.2//The following environments exist
+    "the-following-environments-exist": 0.2//The following environments exist*/
   }
 
   var getScore = function(data){

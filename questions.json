@@ -1,5 +1,5 @@
 {
-    "heading": "JavaScript Project Checklist",
+    "heading": "IOT Project Security Checklist",
     "questions": [
         {
             "type": "text",
@@ -23,8 +23,8 @@
         },
         {
             "type": "section",
-            "id": "management",
-            "label": "Management",
+            "id": "Ecosystem_Access_Control",
+            "label": "Ecosystem Access Control",
             "questions": [
                 {
                     "type": "section",
