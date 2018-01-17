@@ -93,6 +93,11 @@ $(function() {
     "is-there-documentation-for-the-code": 0.28,//Is there documentation for the code?
     "continuous-integration": 0.2,//Continuous integration
     "the-following-environments-exist": 0.2//The following environments exist*/
+    "mobile-default-passwd": 0.45,
+    "mobile-strong-passwd": 0.45,
+    "mobile-expire-passwd": 0.48,
+    "mobile-account-lockout": 0.2,
+    "mobile-2fact-auth" :0.4
   }
 
   var getScore = function(data){
@@ -130,6 +135,6 @@ $(function() {
     ], {
 
     });
-    $('#checklist').append("<div class='answers'>"+JSON.stringify(data)+"</div>");
+   // $('#checklist').append("<div class='answers'>"+JSON.stringify(data)+"</div>");
   }
 });

@@ -27,149 +27,300 @@
             "label": "Ecosystem Access Control",
             "questions": [
                 {
-                    "type": "section",
-                    "label": "People know what they are trying to accomplish.",
-                    "questions": [
-                        {
-                            "type": "textarea",
-                            "label": "What is the project's vision?",
-                            "help": "This is typically a single sentence that describes what the project aspires to be.  Example: \"A JS framework that allows developers to build better apps, faster\". If this doesn't exist, write \"none\".",
-                            "name": "what-is-the-projects-vision"
-                        },
-                        {
-                            "type": "textarea",
-                            "label": "How will the project measure success?",
-                            "help": "Example: Increase mobile conversion rates to 0.75-1.0%, currently ~0.3%. If this doesn't exist, write \"none\".",
-                            "name": "how-will-the-project-measure-success"
-                        },
-                        {
-                            "type": "textarea",
-                            "label": "What is the strategy for accomplishing the project's goals?",
-                            "help": "Example: Combine the desktop and mobile sites for an improved user experience, site parity, and centralized ownership. If this doesn't exist, write \"none\".",
-                            "name": "what-is-the-strategy-for-accomplishing-t"
-                        },
-                        {
-                            "type": "textarea",
-                            "label": "What is the project's roadmap?  What are the goals, plans and release schedule after the current release?",
-                            "help": "Example: Phase 1: Complete A, B, C. Phase 2: Complete D, E, F.  If there are no plans, write \"none\".",
-                            "name": "what-is-the-projects-roadmap-what-are-th"
-                        },
-                        {
-                            "type": "section",
-                            "label": "People are capable of accomplishing the goals.",
-                            "help": "Do people have the skills needed to accomplish the goals and roadmap?  Is the roadmap possible? Is there the access across the organizational bureaucracy?",
-                            "questions": [
-                                {
-                                    "type": "single",
-                                    "label": "Do all employees go through a technical training?",
-                                    "help": "For example a week long JS training.",
-                                    "values": [
-                                        "Yes",
-                                        "No"
-                                    ],
-                                    "name": "do-all-employees-go-through-a-technical-"
-                                },
-                                {
-                                    "type": "single",
-                                    "label": "Is there at least one, yearly, additional training opportunity for all employees?",
-                                    "values": [
-                                        "Yes",
-                                        "No"
-                                    ],
-                                    "name": "is-there-at-least-one-yearly-additional-"
-                                },
-                                {
-                                    "type": "single",
-                                    "label": "How long until something can be released?",
-                                    "values": [
-                                        "3 months",
-                                        "6 months",
-                                        "1 year",
-                                        "1.5 years"
-                                    ],
-                                    "name": "how-long-until-something-can-be-released"
-                                },
-                                {
-                                    "type": "textarea",
-                                    "label": "What is the org chart?",
-                                    "help": "Each person's name and title. Indent subordinates under a manager. If this doesn't exist, write \"none\".",
-                                    "name": "what-is-the-org-chart"
-                                },
-                                {
-                                    "type": "textarea",
-                                    "label": "Who has the final say in content and copy decisions?",
-                                    "help": "A person's name. If multiple people, separate names with \";\".",
-                                    "name": "who-has-the-final-say-in-content-and-cop"
-                                },
-                                {
-                                    "type": "text",
-                                    "label": "Who has the final say in design decisions?",
-                                    "help": "A person's name. If multiple people, separate names with \";\".",
-                                    "name": "who-has-the-final-say-in-design-decision"
-                                },
-                                {
-                                    "type": "text",
-                                    "label": "Who has final say in technology and infrastructure decisions?",
-                                    "help": "The person's name. If multiple people, separate names with \";\".",
-                                    "name": "who-has-final-say-in-technology-and-infr"
-                                },
-                                {
-                                    "type": "single",
-                                    "label": "Do product owners frequently (at least once a month) meet with:",
-                                    "values": [
-                                        "UX teams",
-                                        "Dev teams"
-                                    ],
-                                    "name": "do-product-owners-frequently-at-least-on"
-                                },
-                                {
-                                    "type": "single",
-                                    "label": "Have your company's values, experiences, and goals been expressed to management and the client team?",
-                                    "values": [
-                                        "Yes",
-                                        "No"
-                                    ],
-                                    "name": "have-your-companys-values-experiences-an"
-                                },
-                                {
-                                    "type": "single",
-                                    "label": "Has this checklist been reviewed with the management, design and development teams?",
-                                    "values": [
-                                        "Yes",
-                                        "No"
-                                    ],
-                                    "name": "has-this-checklist-been-reviewed-with-th"
-                                }
-                            ],
-                            "name": "people-are-capable-of-accomplishing-the-"
-                        }
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
                     ],
-                    "name": "people-know-what-they-are-trying-to-acco"
+                    "name":"on-teste"
+                }              
+            ],
+            "name": "Ecosystem-Access-Control"
+        },
+        {
+            "type": "section",
+            "id": "Device_Memory",
+            "label": "Device Memory",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Device-Memory"
+        },
+        {
+            "type": "section",
+            "id": "Device_Physical_Interface",
+            "label": "Device Physical Interface",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Device-Physical-Interface"
+        },
+        {
+            "type": "section",
+            "id": "Device_Firmware",
+            "label": "Device Firmware",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Device-Firmware"
+        },
+        {
+            "type": "section",
+            "id": "Device_Network_Services",
+            "label": "Device Network Services",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Device-Network-Services"
+        },
+        {
+            "type": "section",
+            "id": "Administrative_Interface",
+            "label": "Administrative Interface",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Administrative-Interface"
+        },
+        {
+            "type": "section",
+            "id": "Local_Data_Storage",
+            "label": "Local Data Storage",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Local-Data-Storage"
+        },
+        {
+            "type": "section",
+            "id": "Cloud_Web_Interface",
+            "label": "Cloud Web Interface",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Cloud-Web-Interface"
+        },
+        {
+            "type": "section",
+            "id": "Third-party_Backend_APIs",
+            "label": "Third-party Backend APIs",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Third-party-Backend-APIs"
+        },
+        {
+            "type": "section",
+            "id": "Update_Mechanism",
+            "label": "Update Mechanism",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Update-Mechanism"
+        },
+        {
+            "type": "section",
+            "id": "Mobile_Application",
+            "label": "Mobile Application",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "Does the mobile application force the change the default username and password ?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"mobile-default-passwd"
                 },
                 {
-                    "type": "section",
-                    "label": "People like each other.",
-                    "questions": [
-                        {
-                            "type": "single",
-                            "label": "Does the company have outings?",
-                            "help": "Examples: dinners / activities outside work.",
-                            "values": [
-                                "Yes",
-                                "No"
-                            ],
-                            "name": "does-the-company-have-outings"
-                        },
-                        {
-                            "type": "number",
-                            "label": "How often, in months, do employee reviews happen?",
-                            "name": "how-often-in-months-do-employee-reviews-"
-                        }
+                    "type": "single",
+                    "label": "Does the mobile application force the use of strong passwords?",
+                    "values": [
+                        "Yes",
+                        "No"
                     ],
-                    "name": "people-like-each-other"
-                }
+                    "name":"mobile-strong-passwd"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the mobile application force password expiration after a specific period?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"mobile-expire-passwd"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the mobile interface includes an account lockout mechanism?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"mobile-account-lockout"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the mobile interface Implements two-factor authentication?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"mobile-2fact-auth"
+                }             
             ],
-            "name": "management"
+            "name": "Mobile-Application"
+        },
+        {
+            "type": "section",
+            "id": "Vendor_Backend_APIs",
+            "label": "Vendor Backend APIs",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                },
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                },
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                },
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Vendor-Backend-APIs"
+        },
+        {
+            "type": "section",
+            "id": "Ecosystem_Communication",
+            "label": "Ecosystem Communication",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Ecosystem-Communication"
+        },
+        {
+            "type": "section",
+            "id": "Network_Traffic",
+            "label": "Network Traffic",
+            "questions": [
+                {
+                    "type": "single",
+                    "label": "test",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"on-teste2"
+                }              
+            ],
+            "name": "Network Traffic"
         },
         {
             "type": "section",
