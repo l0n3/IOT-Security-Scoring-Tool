@@ -82,17 +82,60 @@ $(function() {
   })
 
   var answers = {
-   /* "do-all-employees-go-through-a-technical-": 0.46,//Do all employees go through a technical training?
-    "what-is-the-projects-vision": 0.45,//What is the project\'s vision?
-    "how-long-until-something-can-be-released": 0.48,//How long until something can be released?
-    "does-the-company-have-outings": 0.45,//Does the company have outings?
-    "is-user-testing-done": 0.45,//Is user testing done?
-    "the-following-documents-are-created": 0.44,//The following documents are created:
-    "there-are-code-reviews": 0.28,//There are code reviews
-    "are-there-unit-tests": 0.2,//Are there unit tests?
-    "is-there-documentation-for-the-code": 0.28,//Is there documentation for the code?
-    "continuous-integration": 0.2,//Continuous integration
-    "the-following-environments-exist": 0.2//The following environments exist*/
+    "Eco-Resp":0.5,
+    "Eco-Project":0.5,
+    "mem1":0.5,
+    "mem2":0.5,
+    "phy-deb":0.5,
+    "phy-port":0.5,
+    "phy-rev":0.5,
+    "firm1":0.5,
+    "firm2":0.5,
+    "firm3":0.5,
+    "firm4":0.5,
+    "firm5":0.5,
+    "firm6":0.5,
+    "firm7":0.5,
+    "Network1":0.5,
+    "Network2":0.5,
+    "Network3":0.5,
+    "Network4":0.5,
+    "Network5":0.5,
+    "Network6":0.5,
+    "Network7":0.5,
+    "Network8":0.5,
+    "Network9":0.5,
+    "Network10":0.5,
+    "admin1":0.5,
+    "admin2":0.5,
+    "admin3":0.5,
+    "loc-data-1":0.5,
+    "loc-data-2":0.5,
+    "loc-data-3":0.5,
+    "web1":0.5,
+    "web2":0.5,
+    "web3":0.5,
+    "web4":0.5,
+    "web5":0.5,
+    "web6":0.5,
+    "web7":0.5,
+    "web8":0.5,
+    "web9":0.5,
+    "web10":0.5,
+    "web11":0.5,
+    "web12":0.5,
+    "thirdparty1":0.5,
+    "thirdparty2":0.5,
+    "update-plan":0.5,
+    "update-pack":0.5,
+    "mobile-default-passwd": 0.5,
+    "mobile-strong-passwd": 0.5,
+    "mobile-expire-passwd": 0.5,
+    "mobile-account-lockout": 0.5,
+    "mobile-2fact-auth" :0.5,
+    "ecocom1":0.5,
+    "ecocom2":0.5,
+    "ecocom3":0.5
   }
 
   var getScore = function(data){
@@ -130,6 +173,6 @@ $(function() {
     ], {
 
     });
-    $('#checklist').append("<div class='answers'>"+JSON.stringify(data)+"</div>");
+  // $('#checklist').append("<div class='answers'>"+JSON.stringify(data)+"</div>");
   }
 });
