@@ -28,12 +28,21 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Is There a person or role, typically a board level executive, who takes ownership of and is responsible for product, service and business level security?",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste"
+                    "name":"Eco-Resp"
+                },
+                {
+                    "type": "single",
+                    "label": "Is there a documented, well established security policy for the project?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Eco-Project"
                 }              
             ],
             "name": "Ecosystem-Access-Control"
@@ -45,12 +54,23 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Are users credentials , such as names and passwords, stores in a safe memory in the device memory? ",
+                    "help":" The device memory uses hashings algorithms",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
+                    "name":"mem1"
+                },
+                {
+                    "type": "single",
+                    "label": "The device only stores encryption keys in his memory when needed, and does in a safe way and after asking for atuthorization",
+                    "help": "Because storing encryption key in the memory is RISKY!",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"mem2"
                 }              
             ],
             "name": "Device-Memory"
@@ -87,7 +107,7 @@
                         "Yes",
                         "No"
                     ],
-                    "name":"phy-port"
+                    "name":"phy-rev"
                 }
             ],
             "name": "Device-Physical-Interface"
@@ -99,32 +119,169 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "The firmware has been tested (mounted, reversed ..) for any hardcoded credentials",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
-                }              
+                    "name":"firm1"
+                },
+                {
+                    "type": "single",
+                    "label": "The firmware doesn't disclose any information about its version nor the last update information and date",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm2"
+                },
+                {
+                    "type": "single",
+                    "label": "The Firmware is implemented with the most current security patches prior to release.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm3"
+                },
+                {
+                    "type": "single",
+                    "label": "All OS command line access to the most privileged accounts has been removed from the firmware",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm4"
+                },
+                {
+                    "type": "single",
+                    "label": "The Device's firmware kernel and its functions are prevented from being called by external product level interfaces and unauthorised applications.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm5"
+                },
+                {
+                    "type": "single",
+                    "label": "The Devices's Applications are operated at the lowest privilege level possible.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm6"
+                },
+                {
+                    "type": "single",
+                    "label": "All the application security features supported by the firmware are enabled.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"firm7"
+                }
+
             ],
             "name": "Device-Firmware"
         },
         {
             "type": "section",
-            "id": "Device_Network_Services",
-            "label": "Device Network Services",
+            "id": "Device_Network_Services_and_traffic",
+            "label": "Device Network Services and Traffic",
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "The device prevents unauthorised connections to it or other devices the product is connected to, at all levels of the protocols",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
-                }              
+                    "name":"Network1"
+                },
+                {
+                    "type": "single",
+                    "label": "IP Traffic uses only secure protocols with no publically known vulnerabilities, such as TLS or (D)TLS. Insecure and plaintext application layer protocols (such as ICMPv4, TELNET, FTP, HTTP, SMTP and NTP) are not used.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network2"
+                },
+                {
+                    "type": "single",
+                    "label": "All the products’ unused ports are closed and the minimal required number of ports are active.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network3"
+                },
+                {
+                    "type": "single",
+                    "label": "For any WiFi connection, WPA2 with AES or a similar strength encryption has been used and insecure protocols such as WPA and TKIP are disabled.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network4"
+                },
+                {
+                    "type": "single",
+                    "label": "All network communications keys are stored securely",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network5"
+                },
+                {
+                    "type": "single",
+                    "label": "Where the MQTT protocol is used, it is protected by a TLS connection with no known cipher vulnerabilities.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network6"
+                },
+                {
+                    "type": "single",
+                    "label": "Where the CoAP protocol is used, it is protected by a DTLS connection with no known cipher vulnerabilities.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network7"
+                },
+                {
+                    "type": "single",
+                    "label": "Where cryptographic suites are used such as TLS, all cipher suites shall be listed and validated against the current security recommendations such as NIST 800-131A or OWASP,",
+                    "help":"for example using ephemeral key generation and authenticating encrypting ciphers such as AES-GCM. Where insecure ciphers suites are identified they shall be removed from the product.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network8"
+                },
+                {
+                    "type": "single",
+                    "label": "All use of cryptography by the product, such as TLS cipher suites, shall be listed and validated against the import/export requirements for the territories where the product is to be sold and/or shipped.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network9"
+                },
+                {
+                    "type": "single",
+                    "label": "Where there is a loss of communications, it shall not compromise the integrity of the device.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"Network10"
+                }             
             ],
-            "name": "Device-Network-Services"
+            "name": "Device-Network-Services-and-Traffic"
         },
         {
             "type": "section",
@@ -133,12 +290,31 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "The administrative interface has been tested, and validated for Credential management Vulnerabilities",
+                    "help":"Such as Username enumeration, Weak passwords, Account lockout, Known default credentials Insecure password recovery mechanism",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
+                    "name":"admin1"
+                },
+                {
+                    "type": "single",
+                    "label": "Where an admin interface password is used for login authentication, the default password or factory reset password is unique to each device in the product family",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"admin2"
+                },
+                {
+                    "type": "single",
+                    "label": "The administrative interface has the 'Wipe Device' option",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"admin3"
                 }              
             ],
             "name": "Administrative-Interface"
@@ -150,12 +326,32 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Does the disk incorporate encryption mechanisms?",
+                    "help": "Such as full-Disk encryption, Self-Encrypting Drives (SED)",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
+                    "name":"loc-data-1"
+                },
+                {
+                    "type": "single",
+                    "label": "Are the encryption keys well secured and protected againts know Disk decryption mechanisms and software",
+                    "help": "Such as BitLocker, TrueCrypt, VeraCrypt, LUKS, FileVault2, PGP .. ",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"loc-data-2"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the device incorporate Data Integrity checks mechanisms?",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"loc-data-3"
                 }              
             ],
             "name": "Local-Data-Storage"
@@ -167,12 +363,113 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Where the product or service provides a web based interface, strong user authentication is used.",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
+                    "name":"web1"
+                },
+                {
+                    "type": "single",
+                    "label": "Where the product or service provides a web based management interface, strong mutual authentication is used.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web2"
+                },
+                {
+                    "type": "single",
+                    "label": "The web user interface shall follow good practice guidelines, such as those listed in the OWASP top 10 attacks .",
+                    "help":"(https://www.owasp.org)",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web3"
+                },
+                {
+                    "type": "single",
+                    "label": "All the product related cloud and network elements have the latest operating system(s) security patches implemented and processes are in place to keep them updated.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web4"
+                },
+                {
+                    "type": "single",
+                    "label": "All the product related web servers' TLS certificate(s) are signed by trusted certificate authorities; are within their validity period; and processes are in place for their renewal.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web5"
+                },
+                {
+                    "type": "single",
+                    "label": "All the product related web servers use protocols with no publicly known weaknesses.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web6"
+                },
+                {
+                    "type": "single",
+                    "label": "Where a product related to a webserver encrypts communications using TLS and requests a client certificate, the server(s) only establishes a connection if the client certificate and its chain of trust are valid.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web7"
+                },
+                {
+                    "type": "single",
+                    "label": "Where a product related to a webserver encrypts communications using TLS, certificate pinning is implemented. For example, using OWASP * or similar organisations’ certificate and public key pinning guidance.",
+                    "help":"https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web8"
+                },
+                {
+                    "type": "single",
+                    "label": "All the related servers and network elements store any passwords using a cryptographic implementation using industry standard cryptographic algorithms.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web9"
+                },
+                {
+                    "type": "single",
+                    "label": "All the related servers and network elements support access control measures to restrict access to sensitive information or system processes to privileged accounts.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web10"
+                },
+                {
+                    "type": "single",
+                    "label": "All the related and network elements servers prevent anonymous/guest access except for read only access to public information.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web11"
+                },
+                {
+                    "type": "single",
+                    "label": "If run as a cloud service, the service meets industry standard Cloud Security principles such as the Cloud Security Alliance, NIST or UK Government Cloud Security Principles.",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"web12"
                 }              
             ],
             "name": "Cloud-Web-Interface"
@@ -184,12 +481,22 @@
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Does the Device and implemented Third party APIs ensure that any PII are encrypted before being sent?",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
+                    "name":"thirdparty1"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the Device and implemented Third party APIs ensure measures againts information leakage are put to use?",
+                    "help":"such as Device information, Location ..",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"thirdparty2"
                 }              
             ],
             "name": "Third-party-Backend-APIs"
@@ -275,81 +582,39 @@
         },
         {
             "type": "section",
-            "id": "Vendor_Backend_APIs",
-            "label": "Vendor Backend APIs",
-            "questions": [
-                {
-                    "type": "single",
-                    "label": "test",
-                    "values": [
-                        "Yes",
-                        "No"
-                    ],
-                    "name":"on-teste2"
-                },
-                {
-                    "type": "single",
-                    "label": "test",
-                    "values": [
-                        "Yes",
-                        "No"
-                    ],
-                    "name":"on-teste2"
-                },
-                {
-                    "type": "single",
-                    "label": "test",
-                    "values": [
-                        "Yes",
-                        "No"
-                    ],
-                    "name":"on-teste2"
-                },
-                {
-                    "type": "single",
-                    "label": "test",
-                    "values": [
-                        "Yes",
-                        "No"
-                    ],
-                    "name":"on-teste2"
-                }              
-            ],
-            "name": "Vendor-Backend-APIs"
-        },
-        {
-            "type": "section",
             "id": "Ecosystem_Communication",
             "label": "Ecosystem Communication",
             "questions": [
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Does the Ecosystem provide the ability periodically checking its components",
+                    "help":"health checks , HeartBeats ..",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
-                }              
-            ],
-            "name": "Ecosystem-Communication"
-        },
-        {
-            "type": "section",
-            "id": "Network_Traffic",
-            "label": "Network Traffic",
-            "questions": [
+                    "name":"ecocom1"
+                },
                 {
                     "type": "single",
-                    "label": "test",
+                    "label": "Does the Ecosystem provides the ability of Deprovisioning User accounts ?",
                     "values": [
                         "Yes",
                         "No"
                     ],
-                    "name":"on-teste2"
-                }              
+                    "name":"ecocom2"
+                },
+                {
+                    "type": "single",
+                    "label": "Does the system provides the feature of Push to update ",
+                    "values": [
+                        "Yes",
+                        "No"
+                    ],
+                    "name":"ecocom3"
+                }
             ],
-            "name": "Network Traffic"
+            "name": "Ecosystem-Communication"
         }
     ]
 }
