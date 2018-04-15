@@ -1,1 +1,1 @@
-# IOT Project Security Checklist
+# IOT-Security-Scoring-Tool
